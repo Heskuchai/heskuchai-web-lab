@@ -49,7 +49,7 @@ if args.publish:
     subprocess.run(['git','add','.'],cwd=ROOT,check=True)
     changes=subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT)
     if changes.returncode==1:
-        subprocess.run(['git','commit','-m','Build WordPress projects and publish portfolio demos'],cwd=ROOT,check=True)
+        subprocess.run(['git','commit','-m','Publish OPORA construction demo and add portfolio case'],cwd=ROOT,check=True)
     elif changes.returncode!=0: raise SystemExit('Unable to inspect staged changes.')
     subprocess.run(['git','push','-u','origin','main'],cwd=ROOT,env=env,check=True)
     try: pages=api(repo_path+'/pages')

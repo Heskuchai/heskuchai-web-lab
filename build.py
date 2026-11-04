@@ -20,3 +20,6 @@ for slug, title, scripts in [('brutal-barber', 'BRUTAL — барбершоп ·
                 z.write(file, file.relative_to(ROOT / 'wordpress'))
 (ROOT / 'docs' / '.nojekyll').touch()
 print('Static demos and WordPress plugin ZIPs built.')
+
+import subprocess, sys
+subprocess.run([sys.executable,str(ROOT/'projects/opora/build.py')],check=True)

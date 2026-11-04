@@ -1,8 +1,8 @@
 # Heskuchai - WordPress portfolio projects
 
-Два авторські демонстраційні проєкти: **BRUTAL Barber** та **Stockroom**. Це самостійно реалізовані кейси для портфоліо, не замовлення реального бізнесу. Розроблено за участю AI.
+Три авторські демонстраційні проєкти: **BRUTAL Barber**, **Stockroom** та **OPORA**. Це самостійно реалізовані кейси для портфоліо, не замовлення реального бізнесу. Розроблено за участю AI.
 
-Публікація GitHub Pages: [портфоліо](https://heskuchai.github.io/heskuchai-web-lab/), [BRUTAL](https://heskuchai.github.io/heskuchai-web-lab/barber/), [Stockroom](https://heskuchai.github.io/heskuchai-web-lab/stockroom/).
+Публікація GitHub Pages: [портфоліо](https://heskuchai.github.io/heskuchai-web-lab/), [BRUTAL](https://heskuchai.github.io/heskuchai-web-lab/barber/), [Stockroom](https://heskuchai.github.io/heskuchai-web-lab/stockroom/), [OPORA](https://heskuchai.github.io/heskuchai-web-lab/opora/).
 
 ## Проєкти
 
@@ -17,6 +17,12 @@
 Каталог товарів: додавання, редагування, архівування зі скасуванням останньої дії, пошук, категорії, статус залишків, сортування та показники вартості запасів. Імпорт/експорт CSV; ціни в цілих копійках. CSV-імпорт валідується повністю; у WordPress застосовується транзакція. Формули в CSV-експорті нейтралізуються початковим апострофом.
 
 WordPress-плагін: `[heskuchai_stockroom]`, панель **Stockroom**, REST API з `manage_options` та WordPress REST nonce. Дані в окремій таблиці InnoDB. Ліміт імпорту - 500 рядків і 1 МБ на клієнті. Артикул унікальний, включаючи архів. Поточний інтерфейс завантажує весь каталог; для великих складів потрібна серверна пагінація. Одночасне редагування товару двома адміністраторами використовує останній запис; обліку рухів і повного інтерфейсу архіву ще немає.
+
+### OPORA
+
+Інтерактивний лендинг будівельної студії. Три різні SVG-будинки, довгий червоний кран із керуванням гаком, зміна вантажу, майстерня з шарами конструкції, плани, день/ніч та калькулятор матеріалів. Плавна прокрутка на комп'ютері, звичайна сенсорна прокрутка та підтримка `prefers-reduced-motion`. Ціни демонстраційні, реальних заявок немає.
+
+WordPress-плагін: `[opora_studio]`. Встановлення: `build/opora-studio-wordpress.zip`. Шаблон: `wordpress/opora-studio/page.html`, стилі й поведінка: `assets/`, SVG-моделі: `projects/opora/models.py`. Після змін запустіть `python build.py`. Дані калькулятора зберігаються у браузері.
 
 ## GitHub Pages і WordPress
 
