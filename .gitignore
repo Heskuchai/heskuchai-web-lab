@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.log
+.env*
+wp-config.php
+node_modules/
+build/
+tests/runtime/
+docs/qa.html

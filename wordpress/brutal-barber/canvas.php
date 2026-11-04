@@ -1,0 +1,2 @@
+<?php if (!defined('ABSPATH')) { exit; } hb_assets(); ?>
+<!doctype html><html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><meta name="viewport" content="width=device-width, initial-scale=1"><?php wp_head(); ?><style>body{margin:0;background:#ece8df}html{scroll-behavior:smooth;scroll-padding-top:25px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style></head><body <?php body_class(); ?>><?php wp_body_open();while(have_posts()){the_post();the_content();}wp_footer(); ?></body></html>

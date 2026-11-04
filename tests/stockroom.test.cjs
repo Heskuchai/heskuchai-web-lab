@@ -1,0 +1,10 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const core=require('../wordpress/stockroom/assets/core.js');
+const valid={sku:'abc-01',name:'Лампа',category:'Декор',price:'19.99',qty:'0',min_qty:'5'};
+test('exact price cents, zero quantity, canonical SKU',()=>{assert.deepEqual(core.validate(valid),{sku:'ABC-01',name:'Лампа',category:'Декор',price_cents:1999,qty:0,min_qty:5});});
+test('reject negative, fractional quantity, empty and oversized price',()=>{for(const patch of [{qty:'-1'},{qty:'1.2'},{price:''},{price:'10000000'},{price:'1.001'},{sku:'!bad'},{name:' '},{min_qty:'1000001'}])assert.throws(()=>core.validate({...valid,...patch}));});
+test('CSV round trip preserves commas, quotes and newlines',()=>{const item={...core.seed[0],name:'Чашка, "тера"\nнова'};assert.deepEqual(core.parseCSV(core.csv([item]))[0],{sku:item.sku,name:item.name,category:item.category,price_cents:item.price_cents,qty:item.qty,min_qty:item.min_qty});});
+test('CSV rejects duplicates, unclosed quotes and wrong headers',()=>{assert.throws(()=>core.parseCSV(core.csv([core.seed[0],core.seed[0]])));assert.throws(()=>core.parseCSV('sku,name,category,price,qty,min_qty\na,"bad'));assert.throws(()=>core.parseCSV('name,sku\na,b'));});
+test('CSV export neutralizes spreadsheet formula cells',()=>{const item={...core.seed[0],name:'=HYPERLINK("x")'};const csv=core.csv([item]);assert.ok(csv.includes("'=HYPERLINK"));assert.equal(core.parseCSV(csv)[0].name,item.name);});
+test('CSV bounded import',()=>{assert.throws(()=>core.parseCSV(core.csv(Array.from({length:501},(_,i)=>({...core.seed[0],sku:'S'+i})))));});

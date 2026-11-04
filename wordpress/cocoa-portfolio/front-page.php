@@ -1,0 +1,35 @@
+<?php if (!defined('ABSPATH')) { exit; } get_header(); ?>
+<main id="main">
+<section id="top" class="hero wrap">
+ <div class="hero-copy"><p class="eyebrow"><span class="small-star">✳</span> ОСОБИСТЕ ПОРТФОЛІО · 2026</p>
+ <h1>Трохи логіки.<br>Трохи творчості.<br><em>Багато цікавості.</em></h1>
+ <p class="intro">Привіт, я <strong><?php echo esc_html(get_theme_mod('cocoa_name', 'Heskuchai')); ?></strong>.<br><?php echo esc_html(get_theme_mod('cocoa_intro', 'Від ідеї до коду. Вивчаю комп’ютерні науки та створюю цифрові речі з увагою до деталей.')); ?></p>
+ <div class="hero-actions"><a class="button primary" href="#projects">Переглянути проєкти <span>↗</span></a><a class="text-link" href="#about">Ближче познайомимось <span>↓</span></a></div>
+ <div class="hero-note"><span class="status-dot"></span> Відкритий до нових ідей та знайомств</div>
+ </div>
+ <div class="hero-art" aria-label="Абстрактна композиція: арка, сфера та картка з кодом" role="img">
+   <div class="art-grid"></div><div class="arch"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="sphere"></div><div class="art-star">✳</div>
+   <div class="art-caption">curiosity, turned into code.</div>
+   <div class="code-card"><div class="code-top"><i></i><i></i><i></i><span>hello_world.cpp</span></div><div class="code-lines"><span class="code-muted">// починається з ідеї</span><br><span class="code-key">while</span> (curious) {<br>&nbsp;&nbsp;learn();<br>&nbsp;&nbsp;create();<br>&nbsp;&nbsp;<span class="code-key">repeat</span>();<br>}</div></div>
+   <div class="art-label"><span>↗</span> <?php echo esc_html(get_theme_mod('cocoa_specialty', 'Computer Science 122')); ?></div>
+ </div>
+ <div class="hero-bottom"><span>КОД ІЗ ХАРАКТЕРОМ, ДИЗАЙН ІЗ ТЕПЛОМ</span><a href="#about">Гортай далі <span>↓</span></a></div>
+</section>
+<div class="ticker" aria-hidden="true"><div>ЛОГІКА <b>✳</b> ТВОРЧІСТЬ <b>✳</b> РОЗВИТОК <b>✳</b> УВАГА ДО ДЕТАЛЕЙ <b>✳</b> ЛОГІКА <b>✳</b> ТВОРЧІСТЬ <b>✳</b> РОЗВИТОК <b>✳</b></div></div>
+<section class="about wrap section" id="about">
+ <div class="section-side"><p class="eyebrow">01 / ПРО МЕНЕ</p><div class="about-symbol" aria-hidden="true">h<span>✳</span></div><p class="small-label">У ПРОЦЕСІ ПІЗНАННЯ.<br>ЗАВЖДИ.</p></div>
+ <div class="about-copy"><h2>За кожним рядком коду —<br><em>бажання зрозуміти.</em></h2><p>Я Heskuchai, студент ХПІ за спеціальністю «<?php echo esc_html(get_theme_mod('cocoa_specialty', 'Computer Science 122')); ?>». Мені цікаво, як працюють речі: від алгоритму на папері до інтерфейсу, яким приємно користуватися.</p><p>Створюю авторські демопроєкти: від адаптивних сайтів до застосунків із базою даних. Люблю розкладати складні задачі на зрозумілі кроки й знаходити в них прості рішення.</p><div class="about-facts"><div><span>НАПРЯМ</span><strong>Комп’ютерні науки</strong></div><div><span>ПІДХІД</span><strong>Думати. Пробувати. Створювати.</strong></div></div></div>
+</section>
+<section class="projects section" id="projects"><div class="wrap">
+ <div class="section-heading"><div><p class="eyebrow">02 / ВИБРАНІ ІДЕЇ</p><h2>Від ідеї — <em>до робочого проєкту.</em></h2></div><p>Два авторські демопроєкти.<br>Дизайн, код і робочі сценарії.</p></div>
+ <div class="project-toolbar"><div class="filters" role="group" aria-label="Фільтрувати проєкти"><button class="active" data-filter="all" aria-pressed="true">Усе <sup>02</sup></button><button data-filter="web" aria-pressed="false">Веб</button><button data-filter="app" aria-pressed="false">Застосунки</button></div><span class="demo-note">WordPress · PHP · JavaScript</span></div>
+ <div class="project-grid">
+ <button class="project-card" data-category="web" data-project="0" aria-label="Детальніше про BRUTAL Barber"><div class="project-art project-screenshot"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/barber-preview.png" alt="Скріншот реалізованого проєкту BRUTAL Barber" loading="lazy" width="1265" height="712"></div><div class="project-meta"><div><span class="project-type">ВЕБ · АВТОРСЬКИЙ ДЕМОПРОЄКТ</span><h3>BRUTAL Barber</h3><p>Лендинг барбершопа з формою запису та WordPress API.</p></div><span class="project-arrow">↗</span></div></button>
+ <button class="project-card" data-category="app" data-project="1" aria-label="Детальніше про Stockroom"><div class="project-art project-screenshot"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/stockroom-preview.png" alt="Скріншот реалізованого проєкту Stockroom" loading="lazy" width="1265" height="712"></div><div class="project-meta"><div><span class="project-type">ЗАСТОСУНОК · АВТОРСЬКИЙ ДЕМОПРОЄКТ</span><h3>Stockroom</h3><p>Облік товарів, залишки, пошук та імпорт/експорт CSV.</p></div><span class="project-arrow">↗</span></div></button>
+ </div><p class="projects-disclaimer">Це реалізовані авторські демопроєкти, створені за участю AI, а не роботи для замовників. Публічні демо працюють у браузері; версії WordPress зберігають дані на сервері.</p>
+</div></section>
+<section class="skills wrap section" id="skills"><div><p class="eyebrow">03 / ІНСТРУМЕНТИ</p><h2>Ідеї різні.<br><em>Цікавість одна.</em></h2><p>Мови, з якими навчаюся,<br>експериментую та працюю.</p></div><div class="skill-list"><div><span class="skill-num">01</span><h3>C++</h3><p>Алгоритми та структури даних</p><span>↗</span></div><div><span class="skill-num">02</span><h3>Python</h3><p>Логіка, дані та автоматизація</p><span>↗</span></div><div><span class="skill-num">03</span><h3>Java</h3><p>Об’єктноорієнтований підхід</p><span>↗</span></div><div><span class="skill-num">04</span><h3>PHP</h3><p>Веброзробка та WordPress</p><span>↗</span></div></div></section>
+<section class="contact-section" id="contact"><div class="wrap contact-inner"><p class="eyebrow">04 / НАСТУПНИЙ КРОК</p><h2>Хороші речі починаються<br><em>з простого «привіт».</em></h2><p>Є ідея, запитання або просто бажання познайомитися?<br>Буду радий поспілкуватися.</p><a class="button primary" href="<?php echo esc_url(get_theme_mod('cocoa_telegram', 'https://t.me/Heskuchai')); ?>" target="_blank" rel="noopener noreferrer">Написати в Telegram <span>↗</span></a><span class="contact-handle">@Heskuchai</span><span class="contact-star" aria-hidden="true">✳</span></div></section>
+</main>
+<dialog class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Закрити опис проєкту">×</button><p class="eyebrow">АВТОРСЬКИЙ ДЕМОПРОЄКТ</p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-tags"></div><div class="dialog-detail"><h3>Задача та реалізація</h3><p id="dialog-detail"></p></div><p class="dialog-note">Реалізований демопроєкт. Без реального замовника. Деталі зберігання даних описані в README на GitHub.</p><div class="case-links"><a id="case-demo" class="button primary" href="#" target="_blank" rel="noopener noreferrer">Відкрити демо ↗</a><a id="case-source" class="text-link" href="#" target="_blank" rel="noopener noreferrer">Код на GitHub ↗</a></div></dialog>
+<?php get_footer(); ?>

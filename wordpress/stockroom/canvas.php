@@ -1,0 +1,2 @@
+<?php if (!defined('ABSPATH')) { exit; } ?>
+<!doctype html><html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><meta name="viewport" content="width=device-width, initial-scale=1"><?php if(current_user_can('manage_options')) { hs_stock_assets(); } wp_head(); ?><style>body{margin:0}#stockroom{min-height:100vh}</style></head><body <?php body_class(); ?>><?php wp_body_open(); while(have_posts()){the_post();the_content();} wp_footer(); ?></body></html>
