@@ -1,7 +1,6 @@
 # Heskuchai - WordPress portfolio projects
 
-Три авторські демонстраційні проєкти: **BRUTAL Barber**, **Stockroom** та **OPORA**. Це самостійно реалізовані кейси для портфоліо, не замовлення реального бізнесу. Розроблено за участю AI.
-
+Три авторські демонстраційні проєкти: **BRUTAL Barber**, **Stockroom** та **OPORA**. Це самостійно реалізовані кейси для портфоліо, не замовлення реального бізнесу.
 Публікація GitHub Pages: [портфоліо](https://heskuchai.github.io/heskuchai-web-lab/), [BRUTAL](https://heskuchai.github.io/heskuchai-web-lab/barber/), [Stockroom](https://heskuchai.github.io/heskuchai-web-lab/stockroom/), [OPORA](https://heskuchai.github.io/heskuchai-web-lab/opora/).
 
 ## Проєкти
