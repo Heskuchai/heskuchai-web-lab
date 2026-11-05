@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Stockroom by Heskuchai
  * Description: Облік товарів із REST API, архівом та імпортом CSV. Шорткод [heskuchai_stockroom].
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Heskuchai
  * Requires PHP: 8.0
  * License: GPL-2.0-or-later
@@ -96,9 +96,9 @@ add_action('rest_api_init',function(){
     }));
 });
 function hs_stock_assets() {
-    wp_enqueue_style('hs-stockroom',plugins_url('assets/style.css',__FILE__),array(),'1.0.0');
-    wp_enqueue_script('hs-stock-core',plugins_url('assets/core.js',__FILE__),array(),'1.0.0',true);
-    wp_enqueue_script('hs-stockroom',plugins_url('assets/app.js',__FILE__),array('hs-stock-core'),'1.0.0',true);
+    wp_enqueue_style('hs-stockroom',plugins_url('assets/style.css',__FILE__),array(),'1.1.0');
+    wp_enqueue_script('hs-stock-core',plugins_url('assets/core.js',__FILE__),array(),'1.1.0',true);
+    wp_enqueue_script('hs-stockroom',plugins_url('assets/app.js',__FILE__),array('hs-stock-core'),'1.1.0',true);
     wp_localize_script('hs-stockroom','StockroomConfig',array('api'=>esc_url_raw(rest_url('heskuchai-stock/v1/products')),'nonce'=>wp_create_nonce('wp_rest')));
 }
 function hs_stock_view() {

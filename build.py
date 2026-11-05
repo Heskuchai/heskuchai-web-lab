@@ -3,7 +3,7 @@ import shutil
 import zipfile
 
 ROOT = Path(__file__).resolve().parent
-for slug, title, scripts in [('brutal-barber', 'BRUTAL — барбершоп · демопроєкт Heskuchai', ['app.js']), ('stockroom', 'Stockroom — облік товарів · Heskuchai', ['core.js', 'app.js'])]:
+for slug, title, scripts in [('brutal-barber', 'BRUTAL — барбершоп · демопроєкт Heskuchai', ['app.js']), ('stockroom', 'Stockroom - облік товарів · Heskuchai', ['core.js', 'app.js'])]:
     source = ROOT / 'wordpress' / slug
     target = ROOT / 'docs' / ('barber' if slug == 'brutal-barber' else 'stockroom')
     target.mkdir(parents=True, exist_ok=True)
