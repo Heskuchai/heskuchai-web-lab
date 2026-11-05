@@ -50,3 +50,9 @@ WordPress-плагін: `[opora_studio]`. Встановлення: `build/opora
 BRUTAL використовує фотографії Unsplash: [Kawê Rodrigues](https://unsplash.com/photos/JsiH9gv73n0) та [Joshua Rodriguez](https://unsplash.com/photos/CUXxqgjTAt4). Вони ілюструють настрій і не є роботами чи приміщенням вигаданого барбершопа. Фото не входять до GPL-ліцензії коду; див. [Unsplash License](https://unsplash.com/license).
 
 Код: GPL-2.0-or-later. Макети й текст підготовлені для цього портфоліо.
+
+## Редагування портфоліо
+
+Описи, порядок, скриншоти та посилання п’яти робіт зібрані у `portfolio/projects.json`. Структура особистої сторінки - `portfolio/front-page.template.php`, оформлення - `wordpress/cocoa-portfolio/style.css`. Після редагування виконайте `python export_portfolio.py`: команда збирає PHP-шаблон теми та статичну сторінку в `docs/`. Згенерований `front-page.php` окремо не редагуйте. Ім’я, опис та Telegram у локальному WordPress змінюються в налаштуваннях теми; статична публікація потребує нового експорту.
+
+Шрифт Onest збережений локально, без запитів до Google Fonts. Ліцензія SIL Open Font License міститься в `wordpress/cocoa-portfolio/assets/fonts/OFL.txt`.
